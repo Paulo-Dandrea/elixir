@@ -1,5 +1,4 @@
 defmodule WordCount do
-
   defp one_more(existing_value) do
     existing_value + 1
   end
