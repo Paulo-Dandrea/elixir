@@ -42,6 +42,7 @@ defmodule Strain do
 end
 
 # OMG, look this solution from another student
+# Generator expression - Comprehension
 
 defmodule Strain do
   def keep(list, fun) do

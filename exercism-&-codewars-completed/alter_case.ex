@@ -1,4 +1,5 @@
 defmodule Codewars.StringUtils do
+
   def upcase?(letter) do
     letter == String.upcase(letter)
   end

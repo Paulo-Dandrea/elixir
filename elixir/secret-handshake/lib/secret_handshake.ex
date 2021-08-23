@@ -15,5 +15,6 @@ defmodule SecretHandshake do
   """
   @spec commands(code :: integer) :: list(String.t())
   def commands(code) do
+    Bitwise
   end
 end
