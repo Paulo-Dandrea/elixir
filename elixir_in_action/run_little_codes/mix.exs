@@ -1,11 +1,11 @@
-defmodule RomanNumerals.MixProject do
+defmodule RunLittleCodes.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :roman_numerals,
+      app: :run_little_codes,
       version: "0.1.0",
-      # elixir: "~> 1.8",
+      elixir: "~> 1.12",
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]

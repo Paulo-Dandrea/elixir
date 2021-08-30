@@ -20,5 +20,7 @@ erl_crash.dump
 *.ez
 
 # Ignore package tarball (built via "mix hex.build").
-roman_numerals-*.tar
+run_little_codes-*.tar
 
+# Temporary files, for example, from tests.
+/tmp/
