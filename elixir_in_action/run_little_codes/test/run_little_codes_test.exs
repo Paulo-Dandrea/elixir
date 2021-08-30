@@ -1,8 +1,8 @@
 defmodule RunLittleCodesTest do
   use ExUnit.Case
-  doctest RunLittleCodes
+  doctest ListLength
 
-  test "greets the world" do
-    assert RunLittleCodes.hello() == :world
+  test "ListLengthModule" do
+    assert ListLength.calc([1,2,3]) == 3
   end
 end
