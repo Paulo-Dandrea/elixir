@@ -1,3 +1,7 @@
+/* -------------------------------------------------------------------------- */
+/*                             Recursion exercises                            */
+/* -------------------------------------------------------------------------- */
+
 # recursive
 defmodule ListLength do
   def calc(list) do
@@ -45,8 +49,38 @@ defmodule Positive do
 
   defp do_calc([head | tail], positives) do
     case head > 0 do
-      true -> do_calc(tail,  positives ++ [head])
+      true -> do_calc(tail, positives ++ [head])
       false -> do_calc(tail, positives)
     end
   end
 end
+
+/* -------------------------------------------------------------------------- */
+/*                            Double comprehension                            */
+/* -------------------------------------------------------------------------- */
+
+# multiplication_table =
+#   for x <- 1..9, y <- 1..9, into: %{} do
+#     {{x, y}, x * y}
+#   end
+
+# IO.puts(multiplication_table[{7, 6}])
+
+
+/* -------------------------------------------------------------------------- */
+/*                              # Using streams:                              */
+/* -------------------------------------------------------------------------- */
+
+defmodule SquareRoot do
+  def calc(list) do
+    list
+    |> Stream.filter(&(is_number(&1) and &1 > 0))
+    |> Stream.map(&{&1, :math.sqrt(&1)})
+    |> Stream.with_index()
+    |> Enum.each(fn {{input, result}, index} ->
+      IO.puts("#{index + 1}. sqrt(#{input}) = #{result}")
+    end)
+  end
+end
+
+# SquareRoot.calc([9, -1, "foo", 25, 49])
